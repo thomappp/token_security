@@ -1,7 +1,7 @@
 local playerToken = nil
 
-RegisterNetEvent("binoculars_script:set_client_token")
-AddEventHandler("binoculars_script:set_client_token", function(token)
+RegisterNetEvent("token_security_script:set_client_token")
+AddEventHandler("token_security_script:set_client_token", function(token)
     playerToken = token
 end)
 
