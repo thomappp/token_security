@@ -5,4 +5,7 @@ author 'Thomapp'
 description 'Token Security Script.'
 
 client_script 'client.lua'
-server_script 'server.lua'
+export 'GetPlayerToken'
+
+server_script { 'server.lua', 'config.lua' }
+server_export 'VerifyToken'

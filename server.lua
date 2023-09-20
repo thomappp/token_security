@@ -19,15 +19,17 @@ local SetPlayerToken = function(playerSource, token)
     TriggerClientEvent("token_security_script:set_client_token", playerSource, token)
 end
 
-local VerifyToken = function(playerSource, token)
-    local playerToken = playersTokens[playerSource]
+exports("VerifyToken", function(playerId, token)
+    local playerToken = playersTokens[playerId]
 
     if playerToken and playerToken == token then
         return true
     else
+        print((Config.ConsoleMessage):format(GetPlayerName(playerId), playerId, token))
+        DropPlayer(playerId, Config.KickMessage)
         return false
     end
-end
+end)
 
 AddEventHandler("playerJoining", function()
     local playerSource = source
@@ -40,18 +42,5 @@ AddEventHandler("playerDropped", function()
     
     if playersTokens[playerSource] then
         playersTokens[playerSource] = nil
-    end
-end)
-
--- Exemple : 
-
-RegisterServerEvent("script_name:event_name")
-AddEventHandler("script_name:event_name", function(token)
-    local playerSource = source
-    
-    if VerifyToken(playerSource, token) then
-        -- Executer un code
-    else
-        DropPlayer(playerSource, "Assurez vous de ne pas utiliser de cheat.") -- Bannir, kick un joueur
     end
 end)

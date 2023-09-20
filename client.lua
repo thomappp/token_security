@@ -5,6 +5,14 @@ AddEventHandler("token_security_script:set_client_token", function(token)
     playerToken = token
 end)
 
--- Exemple : 
+local DoesPlayerTokenExist = function()
+    return playerToken ~= nil
+end
 
-TriggerServerEvent("script_name:event_name", playerToken)
+exports("GetPlayerToken", function()
+    while not DoesPlayerTokenExist() do
+        Citizen.Wait(100)
+    end
+
+    return playerToken
+end)
