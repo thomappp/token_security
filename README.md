@@ -36,4 +36,4 @@ AddEventHandler("script:add_money", function(token, data)
 end)
 ```
 
-![Youtube](https://www.youtube.com/watch?v=FFrn1LBPtN4)
+[Vidéo YouTube](https://www.youtube.com/watch?v=FFrn1LBPtN4)
