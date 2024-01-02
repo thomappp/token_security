@@ -1,6 +1,7 @@
 # Token Security Script
 
 Le joueur ne peut pas déclencher un événement depuis son client avec un cheat et un token aléatoire.
+https://www.youtube.com/watch?v=FFrn1LBPtN4
 
 # Utilisation et exemples
 
@@ -35,5 +36,3 @@ AddEventHandler("script:add_money", function(token, data)
     end
 end)
 ```
-
-[Vidéo YouTube](https://www.youtube.com/watch?v=FFrn1LBPtN4)
