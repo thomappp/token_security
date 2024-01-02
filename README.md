@@ -1,7 +1,6 @@
 # Token Security Script
 
-Le joueur ne peut pas déclencher un événement depuis son client avec un cheat et un token aléatoire.
-Vidéo : https://www.youtube.com/watch?v=FFrn1LBPtN4
+Le joueur ne peut pas déclencher un événement depuis son client avec un cheat et un token aléatoire.\nVidéo : https://www.youtube.com/watch?v=FFrn1LBPtN4
 
 # Utilisation et exemples
 
